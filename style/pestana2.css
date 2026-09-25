@@ -1,0 +1,610 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7fafc;
+    color: #263238;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   BARRA DE NAVEGACIÓN
+===================================================== */
+
+.navbar {
+    height: 72px;
+    width: 100%;
+    padding: 0 7%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5ebf0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo span {
+    color: #005baa;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu a {
+    padding: 9px 14px;
+    color: #53636d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #005baa;
+    background: #edf6fc;
+}
+
+.menu a.activo {
+    color: #ffffff;
+    background: #005baa;
+}
+
+
+/* =====================================================
+   PORTADA DE LAS PESTAÑAS
+===================================================== */
+
+.pagina-portada {
+    background:
+        linear-gradient(90deg, rgba(0, 57, 105, 0.93) 0%, rgba(0, 91, 170, 0.75) 52%, rgba(0, 71, 131, 0.28) 100%),
+        url("https://images.unsplash.com/photo-1627764940620-90393d0e8c34?auto=format&fit=crop&w=1800&q=85") center / cover no-repeat;
+
+    color: #ffffff;
+
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Elemento decorativo */
+
+.pagina-portada::after {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    border: 70px solid rgba(255, 255, 255, 0.06);
+
+    right: -160px;
+    bottom: -220px;
+}
+
+
+/* CONTENIDO */
+
+.pagina-portada-contenido {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+.credito-portada {
+    position: absolute;
+    right: 4%;
+    bottom: 18px;
+    z-index: 3;
+    color: #ffffff;
+    font-size: 0.75rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.credito-portada:hover {
+    text-decoration: underline;
+}
+
+
+/* ETIQUETA */
+
+.etiqueta {
+    display: inline-block;
+
+    background-color: #f4a62a;
+
+    color: #ffffff;
+
+    padding: 7px 15px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+
+/* NÚMERO */
+
+.numero-pagina {
+    position: absolute;
+
+    right: 20px;
+    top: 0;
+
+    font-size: 120px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    color: rgba(255, 255, 255, 0.08);
+}
+
+
+/* TÍTULO */
+
+.pagina-portada h1 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    font-size: 48px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+}
+
+
+/* TEXTO PORTADA */
+
+.pagina-portada p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+
+    font-size: 18px;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.seccion {
+    padding: 80px 0;
+}
+
+
+/* =====================================================
+   CONTEXTO
+===================================================== */
+
+.contexto {
+    background-color: #ffffff;
+}
+
+
+.contexto-texto {
+    max-width: 900px;
+    margin: auto;
+}
+
+
+/* SUBTÍTULO */
+
+.subtitulo {
+    display: inline-block;
+
+    color: #005baa;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+/* TÍTULO */
+
+.contexto-texto h2 {
+    color: #004783;
+
+    font-size: 34px;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+
+/* PÁRRAFOS */
+
+.contexto-texto p {
+    color: #555;
+
+    font-size: 17px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   IMAGEN
+===================================================== */
+
+.imagen-seccion {
+    background-color: #eef5fb;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+.imagen-contenedor {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background: linear-gradient(135deg, #ffffff 0%, #edf6ff 100%);
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(0, 91, 170, 0.12);
+}
+
+.imagen-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #eaf5ff 0%, #f5fbf3 100%);
+    border: 1px solid #dfeefb;
+    text-align: center;
+    color: #005baa;
+    overflow: hidden;
+}
+
+.imagen-placeholder img {
+    width: 100%;
+    min-height: 280px;
+    max-height: 470px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.credito-imagen {
+    margin-top: 10px;
+    color: #607d8b;
+    font-size: 0.8rem;
+    text-align: right;
+}
+
+.credito-imagen a:hover {
+    text-decoration: underline;
+}
+
+.imagen-placeholder span {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.imagen-placeholder p {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #0b3f66;
+}
+
+
+/* =====================================================
+   REFLEXIÓN
+===================================================== */
+
+.reflexion-contexto {
+    background-color: #ffffff;
+}
+
+
+.reflexion-box {
+    max-width: 900px;
+
+    margin: auto;
+
+    background-color: #f5f9fd;
+
+    border-left: 5px solid #005baa;
+
+    padding: 40px;
+
+    border-radius: 0 12px 12px 0;
+}
+
+
+.reflexion-box h2 {
+    color: #004783;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+.reflexion-box p {
+    color: #555;
+
+    font-size: 16px;
+
+    margin-bottom: 15px;
+}
+
+
+.reflexion-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background-color: #004783;
+
+    color: #ffffff;
+
+    padding: 45px 20px;
+
+    text-align: center;
+}
+
+
+.footer-contenedor {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+
+.footer h3 {
+    font-size: 22px;
+
+    margin-bottom: 8px;
+}
+
+
+.footer p {
+    color: rgba(255, 255, 255, 0.85);
+
+    margin-bottom: 8px;
+}
+
+
+.footer .copyright {
+    font-size: 13px;
+
+    margin-top: 20px;
+
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 15px 0;
+
+        gap: 5px;
+    }
+
+
+    .menu {
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .menu a {
+        padding: 10px 9px;
+
+        font-size: 13px;
+    }
+
+
+    .pagina-portada {
+        min-height: 350px;
+    }
+
+
+    .pagina-portada h1 {
+        font-size: 40px;
+    }
+
+
+    .numero-pagina {
+        font-size: 90px;
+
+        right: 0;
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        width: 88%;
+    }
+
+
+    /* NAV */
+
+    .menu {
+        gap: 0;
+    }
+
+
+    .menu a {
+        padding: 8px 6px;
+
+        font-size: 11px;
+    }
+
+
+    /* PORTADA */
+
+    .pagina-portada {
+        min-height: 330px;
+    }
+
+
+    .pagina-portada-contenido {
+        width: 88%;
+    }
+
+
+    .pagina-portada h1 {
+        font-size: 32px;
+    }
+
+
+    .pagina-portada p {
+        font-size: 16px;
+    }
+
+
+    .numero-pagina {
+        display: none;
+    }
+
+
+    /* SECCIONES */
+
+    .seccion {
+        padding: 55px 0;
+    }
+
+
+    .contexto-texto h2 {
+        font-size: 28px;
+    }
+
+
+    .contexto-texto p {
+        font-size: 16px;
+    }
+
+
+    /* IMAGEN */
+
+    .imagen-seccion {
+        padding: 35px 0;
+    }
+
+
+    .imagen-contenedor {
+        padding: 7px;
+
+        border-radius: 10px;
+    }
+
+
+    /* REFLEXIÓN */
+
+    .reflexion-box {
+        padding: 25px;
+
+        border-left-width: 4px;
+    }
+
+
+    .reflexion-box h2 {
+        font-size: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 35px 15px;
+    }
+
+}
