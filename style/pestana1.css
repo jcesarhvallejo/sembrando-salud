@@ -867,36 +867,24 @@ footer {
 }
 
 /* Navegación compartida: mismas proporciones en todas las páginas. */
-@media (max-width: 1250px) {
-    .navbar { min-height: auto; height: auto; padding: 12px 4%; gap: 10px; }
-    .menu a { width: 172px; min-height: 56px; padding: 7px 10px; font-size: 0.78rem; }
-}
-
-@media (max-width: 650px) {
-    .navbar { padding: 16px; gap: 12px; }
-    .menu { gap: 5px; }
-    .menu a { width: calc(50% - 5px); min-height: 56px; padding: 8px 9px; font-size: 0.78rem; }
-}
-/* Medidas base comunes para el menú de escritorio. */
 .navbar {
     height: 72px;
     min-height: 72px;
 }
 
-.navbar nav a,
 .menu a {
     width: 172px;
     min-height: 56px;
     padding: 7px 10px;
     font-size: 0.78rem;
 }
+
 @media (max-width: 1250px) {
-    .navbar { height: auto; min-height: auto; }
-}
-@media (max-width: 1250px) {
-    .menu a { width: 172px; min-height: 56px; padding: 7px 10px; font-size: 0.78rem; }
+    .navbar { height: auto; min-height: auto; padding: 12px 4%; gap: 10px; flex-direction: column; }
+    .menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 5px; }
 }
 
 @media (max-width: 650px) {
+    .navbar { padding: 16px; gap: 12px; }
     .menu a { width: calc(50% - 5px); min-height: 56px; padding: 8px 9px; font-size: 0.78rem; }
 }
