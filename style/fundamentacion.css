@@ -4,6 +4,7 @@
     padding: 0;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -64,6 +65,25 @@ a {
     color: #ffffff;
 }
 
+.menu a {
+    display: flex;
+    width: 172px;
+    min-height: 56px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 7px 10px;
+    text-align: center;
+    line-height: 1.15;
+}
+
+.menu a .escenario {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
 .pagina-portada {
     display: flex;
     min-height: 310px;
@@ -95,7 +115,24 @@ a {
     margin: 0 auto 22px;
     color: #37474f;
     font-size: 1rem;
+    text-align: justify;
+    text-justify: inter-word;
     white-space: pre-line;
+}
+
+.documento .titulo-territorial.titulo-territorial {
+    max-width: 950px;
+    margin: 64px auto 34px;
+    padding: 18px 24px;
+    border-left: 7px solid #f4a62a;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, #004783, #005baa);
+    color: #ffffff;
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    line-height: 1.25;
+    text-align: justify;
 }
 
 .documento p:not(:has(+ p)) {
@@ -108,6 +145,7 @@ a {
     font-size: 1.65rem;
     font-weight: 800;
     line-height: 1.25;
+    text-align: justify;
 }
 
 .document-image {
@@ -178,6 +216,25 @@ a {
     font-size: 0.86rem;
 }
 
+@media (max-width: 1250px) {
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 12px 4%;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: 0.78rem;
+    }
+}
+
 @media (max-width: 900px) {
     .navbar {
         height: auto;
@@ -201,6 +258,7 @@ a {
     .menu a {
         padding: 8px 9px;
         font-size: 0.78rem;
+        width: calc(50% - 5px);
     }
 
     .pagina-portada {
@@ -220,7 +278,47 @@ a {
         font-size: 0.97rem;
     }
 
+    .documento .titulo-territorial {
+        margin-top: 46px;
+        padding: 16px 18px;
+    }
+
     .documento p:is(:nth-child(1), :nth-child(6), :nth-child(8), :nth-child(14), :nth-child(18), :nth-child(22), :nth-child(28), :nth-child(32)) {
         font-size: 1.4rem;
     }
+}
+
+/* Navegación compartida: mismas proporciones en todas las páginas. */
+@media (max-width: 1250px) {
+    .navbar { min-height: auto; height: auto; padding: 12px 4%; gap: 10px; }
+    .menu a { width: 172px; min-height: 56px; padding: 7px 10px; font-size: 0.78rem; }
+}
+
+@media (max-width: 650px) {
+    .navbar { padding: 16px; gap: 12px; }
+    .menu { gap: 5px; }
+    .menu a { width: calc(50% - 5px); min-height: 56px; padding: 8px 9px; font-size: 0.78rem; }
+}
+/* Medidas base comunes para el menú de escritorio. */
+.navbar {
+    height: 72px;
+    min-height: 72px;
+}
+
+.navbar nav a,
+.menu a {
+    width: 172px;
+    min-height: 56px;
+    padding: 7px 10px;
+    font-size: 0.78rem;
+}
+@media (max-width: 1250px) {
+    .navbar { height: auto; min-height: auto; }
+}
+@media (max-width: 1250px) {
+    .menu a { width: 172px; min-height: 56px; padding: 7px 10px; font-size: 0.78rem; }
+}
+
+@media (max-width: 650px) {
+    .menu a { width: calc(50% - 5px); min-height: 56px; padding: 8px 9px; font-size: 0.78rem; }
 }
